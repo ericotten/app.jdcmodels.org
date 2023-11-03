@@ -120,6 +120,18 @@ button#view-profile {
     background: #00AFF0 !important;
 }
 
+button.gold {
+    background: hsla(39, 100%, 68%, 1);
+
+    background: linear-gradient(315deg, hsla(39, 100%, 68%, 1) 0%, hsla(44, 81%, 44%, 1) 100%);
+
+    background: -moz-linear-gradient(315deg, hsla(39, 100%, 68%, 1) 0%, hsla(44, 81%, 44%, 1) 100%);
+
+    background: -webkit-linear-gradient(315deg, hsla(39, 100%, 68%, 1) 0%, hsla(44, 81%, 44%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFC55A", endColorstr="#CC9C16", GradientType=1 );
+}
+
 #home-screen {
     position: relative;
     /* Other styles for home-screen */

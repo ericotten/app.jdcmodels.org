@@ -154,6 +154,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 
+    // Handle the "Refer a Friend" button click
+    document.getElementById('refer-a-friend-btn').addEventListener('click', function() {
+        switchScreen('dashboard', 'refer-a-friend');
+    });
+
+    // Handle the back to dashboard button
+    document.getElementById('back-to-dashboard').addEventListener('click', function() {
+        switchScreen("refer-a-friend", "dashboard");
+    });
 });
 
 function checkLogin() {
@@ -182,5 +191,11 @@ function updateDashboard(name, driveLink, telegramLink) {
   const telegramLinkElement = document.getElementById('telegram-link');
   if (telegramLinkElement) {
     telegramLinkElement.setAttribute('href', telegramLink);
+  }
+
+  // Update the Telegram link in referral dashboard
+  const telegramLinkElement2 = document.getElementById('telegram-link-2');
+  if (telegramLinkElement2) {
+    telegramLinkElement2.setAttribute('href', telegramLink);
   }
 }
