@@ -1,0 +1,180 @@
+/* Include Google Font - Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default margin */
+}
+
+/* Use flexbox to center children both horizontally and vertically */
+body {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    text-align: center; /* Ensures that the text inside the flex item is centered as well */
+    background-color: #101e3b; /* Primary color background */
+}
+
+/* Style for individual screens */
+.screen {
+    width: 100%; /* Use the full width of the container */
+    max-width: 600px; /* You can set a max-width to avoid overly wide screens */
+    margin: auto; /* Ensures margins are auto for screens that are not 100% of viewport width */
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack children vertically */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity and visibility */
+    opacity: 0;
+}
+
+.screen.invisible {
+    display: flex; /* Now using flex to display the active screen */
+    opacity: 0;
+    visibility: visible;
+    transition: opacity 0.5s ease; /* No delay when becoming visible */
+}
+
+/* Class to add when a screen is active */
+.screen.active {
+    display: flex; /* Now using flex to display the active screen */
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease; /* No delay when becoming visible */
+}
+
+a {
+    color: white !important;
+}
+
+body, input, button {
+    font-family: 'Montserrat', sans-serif;
+    color: white; /* Set default text color to white */
+}
+
+body {
+}
+
+.screen-container {
+    width: 400px;
+    margin: auto;
+}
+
+#logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+    margin: auto;
+    border-radius: 25px;
+    box-shadow: #000000 10px 10px 10px;
+    margin-bottom: 25px;
+}
+
+button {
+    background: hsla(220, 57%, 54%, 1);
+
+background: linear-gradient(270deg, hsla(220, 57%, 54%, 1) 0%, hsla(220, 50%, 44%, 1) 99%);
+
+background: -moz-linear-gradient(270deg, hsla(220, 57%, 54%, 1) 0%, hsla(220, 50%, 44%, 1) 99%);
+
+background: -webkit-linear-gradient(270deg, hsla(220, 57%, 54%, 1) 0%, hsla(220, 50%, 44%, 1) 99%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4672CD", endColorstr="#395EA9", GradientType=1 );
+    border: none;
+    border-radius: 20px; /* Rounded corners for buttons */
+    padding: 12px 30px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: 600; /* Montserrat semi-bold */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 10px auto 10px auto;
+}
+
+input {
+    border: 2px solid #ffffff; /* Secondary color border for inputs */
+    border-radius: 20px; /* Rounded corners for inputs */
+    padding: 10px;
+    margin: 10px 0;
+    width: 300px; /* Responsive width with padding */
+    margin: 10px auto 10px auto;
+    background-color: transparent;
+    color: white;
+}
+
+input[type="url"]::placeholder {
+    color: #ddd; /* Lighter placeholder text */
+}
+
+#dashboard h2 {
+    margin-top: 25px;
+}
+
+button#view-profile {
+    background: #00AFF0 !important;
+}
+
+#home-screen {
+    position: relative;
+    /* Other styles for home-screen */
+}
+
+p {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    transition: opacity 0.2s ease;
+    opacity: 1;
+}
+
+p.invisible {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+p.warning {
+    color: #f97a71;
+}
+
+#video-container {
+  width: 100vw;
+  height: 100vh; 
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -1;
+  background-color: black;
+}
+
+#bg-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+
+    /* Make video to at least 100% wide and tall */
+    min-width: 100%; 
+    min-height: 100%; 
+
+    /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+    width: auto;
+    height: auto;
+
+    /* Center the video */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    opacity: 0.4;
+}

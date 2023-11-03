@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDC Models</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="Icon.png">
+    <link rel="apple-touch-startup-image" href="/Launch.png">
+    <meta name="apple-mobile-web-app-title" content="JDC Models">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#101e3b">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Other head elements such as stylesheets, etc. -->
+</head>
+<body>
+    <div id="home-screen" class="screen active">
+        <div id="video-container">
+            <video autoplay muted loop id="bg-video">
+                <source src="Video.mp4" type="video/webm">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <div class="screen-container">
+            <img src="Icon.png" alt="Logo" id="logo">
+            <h1>JDC Models</h1>
+            <p>Manage your profile, view training resources, speak with our team, and access <b>JDC Trend Analysis</b> all in one app!</p>
+            <button id="join-now" onclick="location.href='https://forms.gle/9DyiXrwvBsFJBAWr6';">Apply to Join Us</button>
+            <button id="log-in-btn">Log In</button>
+            <p><a href="#" id="how-to-download">How to Download</a></p>
+        </div>
+    </div>
+
+    <div id="download-instructions" class="screen">
+        <div class="screen-container">
+            <img src="Icon.png" alt="Logo" id="logo">
+            <h1>Download the JDC Models App</h1>
+            <p>Step 1: Click the Share button</p>
+            <p>Step 2: Click "Add to Home Screen"</p>
+            <p>Step 3: Click "Add" to download the JDC Models App to your device.</p>
+            <!-- Back Button -->
+            <button id="back-to-home">Back</button>
+        </div>
+    </div>
+
+    <div id="login-screen" class="screen">
+        <div class="screen-container">
+            <img src="Icon.png" alt="Logo" id="logo">
+            <h1>Log In</h1>
+            <p>Enter your JDC Models access code below to log into your account.</p>
+            <input type="url" id="login-access-code" placeholder="Enter your access code">
+            <button id="submit-login">Submit</button>
+            <p class="warning invisible" id="invalid-code">Invalid access code. Please try again.</p>
+        </div>
+    </div>
+
+    <div id="dashboard" class="screen">
+        <div class="screen-container">
+            <img src="Icon.png" alt="Logo" id="logo">
+            <h1>JDC Models Dashboard</h1>
+            <p id="welcome-text">Welcome, user!</p>
+
+            <a href="https://onlyfans.com/" target="_blank">
+                <button id="view-profile">
+                    <img src="OnlyFans Logo.png" alt="OnlyFans" style="height: 15px; vertical-align: middle;"/>
+                    Access My Profile &rsaquo;
+                </button>
+            </a>
+
+            <a href="#" target="_blank" id="drive-link">
+                <button>
+                    <img src="Google Drive Logo.png" alt="OnlyFans" style="height: 15px; vertical-align: middle;"/>
+                    Upload Content &rsaquo;
+                </button>
+            </a>
+
+
+            <a href="#" target="_blank" id="telegram-link">
+                <button>
+                    <img src="Telegram Logo.png" alt="OnlyFans" style="height: 15px; vertical-align: middle;"/>
+                    Speak with Our Team &rsaquo;
+                </button>
+            </a>
+
+            <h2>Training Resources</h2>
+            
+            <a href="https://docs.google.com/document/d/16gGv9Hr2fp71uN1snbwJ7PftRyg6k1_qDxrlC54na58/edit?usp=sharing" target="_blank">
+                <button>
+                    <img src="Document.png" alt="OnlyFans" style="height: 15px; vertical-align: middle;"/>
+                    Welcome Guide &rsaquo;
+                </button>
+            </a>
+
+            <a href="https://docs.google.com/document/d/1mi6o30PeZKPcVZZiAbbhL3CQ5HlwjccGelXThFeulOI/edit?usp=sharing" target="_blank">
+                <button>
+                    <img src="Document.png" alt="OnlyFans" style="height: 15px; vertical-align: middle;"/>
+                    Content Schedule &rsaquo;
+                </button>
+            </a>
+
+            <p><a href="#" onclick="signOut();">Sign Out</a></p>
+        </div>
+    </div>
+</body>
+</html>
